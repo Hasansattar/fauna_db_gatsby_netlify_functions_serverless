@@ -4,9 +4,9 @@ var faunadb = require('faunadb'),
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event,context) => {
  
-  // if (event.httpMethod !== "POST"){
-  //   return {statusCode:405, body:"Method Not Allowed"};
-  // }
+  if (event.httpMethod !== "POST"){
+    return {statusCode:405, body:"Method Not Allowed"};
+  }
  
  
   try {
